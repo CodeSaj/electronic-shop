@@ -1,0 +1,64 @@
+*{
+    margin: 0px;
+    padding: auto;
+    font-family: 'Roboto', sans-serif;
+    font-family: "Audiowide", sans-serif;
+
+  }
+
+ .container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/1635583696_1__1.png);
+    background-position: center;
+    background-size: cover;
+    display: grid;/* Container use grid and these containers will use templet columes */
+    grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
+
+  }
+  #home {
+    width: 46px;
+    height: 44px;
+    background: url(img_navsprites.gif);
+  }
+  .navbar{
+    width: 12%;
+    height: flex;
+    align-items: top;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .logo{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+  }
+
+  nav{
+    flex: 1;
+    text-align: right;
+  }
+  h5{
+    color: rgb(147, 27, 91);
+    font-size: 40px; 
+    text-align: center;
+ }
+  p{
+    color: azure;
+    font-size: large;
+  }
+  .nav-wrapper{
+    display: flex;
+    /* Justyfing the content and then 
+    writing what we want to justify which
+    in this case will be the space in between*/
+
+    justify-content: space-between;
+    /* Adding space */
+    padding: 38px; /*Adds space */
+    flex-grow:1;
+    
+}
