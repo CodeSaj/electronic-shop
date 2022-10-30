@@ -1,6 +1,6 @@
 *{
-    margin: 0px;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     font-family: "Audiowide", sans-serif;
 
@@ -9,37 +9,134 @@
  .container{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/1635583696_1__1.png);
+    background: linear-gradient(to top, rgba(246, 246, 246, 0.5)50%,rgba(246, 246, 246, 0.095)50%),url(Images/background.jpg);
     background-position: center;
     background-size: cover;
-    display: grid;/* Container use grid and these containers will use templet columes */
-    grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
+    height: 100vh;
+     /*grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
 
   }
-  #home {
-    width: 46px;
-    height: 44px;
-    background: url(img_navsprites.gif);
-  }
   .navbar{
-    width: 12%;
-    height: flex;
-    align-items: top;
+    width: 1200px;
+    height: 75px;
+    margin: auto;
   }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  .icon{
+    width: 200px;
+    float: left;
+    height: 70px;
   }
   .logo{
     width: 50px;
+    color: aqua;
+    font-size: 35px;
     cursor: pointer;
+    float: left;
+    float: top;
     margin-left: 40px;
+    padding-left: 20px;
+    padding-top: 10px;
   }
+  .menu{
+    width: 400px;
+    float: left;
+    height: 70px;
+  }
+  ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+  }
+  ul li{
+    list-style: none;
+    margin-left: 62px ;
+    margin-top: 27px;
+    font-size: 14px;
+  }
+  ul li a{
+    text-decoration: none;
+     color: azure;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4 ease-in-out;
+  }
+  ul li a:hover{
+    color: orange;
+  }
+ .search{
+  width: 330px;
+  float: left;
+  margin-left: 270px;
+ }
+.searchbtn{
+  font-family: 'Times New Roman';
+  width: 200px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid rgb(108, 243, 140);
+  margin-top: 13px;
+  color: white;
+  border-right: none;
+  font-size: 16px;
+  float: left;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius:5px ;
+}
+.submitbtn{
+width: 100px;
+height:65px;
+background: rgb(24, 196, 173);
+border: 2px solid rgb(79, 230, 179);
+margin-top: 13px;
+color: rgb(0, 0, 0);
+font-size: 15px;
+border-bottom-right-radius:1px;
+border-top-right-radius:1px ;
+}
+.submitbtn:focus{
+  outline: none;
+}
+.searchbtn:focus{
+  outline: none;
+}
+.content{
+  width: 12000px;
+  height: auto;
+  margin: auto;
+  color: aquamarine;
+}
+.content .par{
+  padding-left: 10px;
+  padding-bottom: 25px;
+  font-family: Arial;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+.content h1{
+  font-family: 'Times New Roman';
+  font-size: 50px;
+  padding-left:20px;
+  margin-top: 9%;
+  letter-spacing: 2px;
+  text-align: center;
 
-  nav{
+}
+.content .catbtn{
+  width: 16px;
+  height: 40px;
+  background: violet;
+  border: none;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+nav{
     flex: 1;
-    text-align: right;
+    text-align: left;
   }
   h5{
     color: rgb(147, 27, 91);
