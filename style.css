@@ -1,10 +1,12 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    font-family: "Audiowide", sans-serif;
 
-}
-.container{
+  }
+
+ .container{
     width: 100%;
     height: 100vh;
     background: linear-gradient(to top, rgba(246, 246, 246, 0.5)50%,rgba(246, 246, 246, 0.095)50%),url(Images/background.jpg);
@@ -13,34 +15,34 @@
     height: 100vh;
      /*grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
 
-}
-.navbar{
+  }
+  .navbar{
     width: 1200px;
     height: 75px;
     margin: auto;
-}
-.icon{
+  }
+  .icon{
     width: 200px;
     float: left;
     height: 70px;
-}
-.logo{
+  }
+  .logo{
     width: 50px;
     color: aqua;
-    font-size: 50px;
+    font-size: 35px;
     cursor: pointer;
     float: left;
     float: top;
-    margin-left: 0px;
-    padding-left: 10px;
+    margin-left: 40px;
+    padding-left: 20px;
     padding-top: 10px;
-}
-.menu{
+  }
+  .menu{
     width: 400px;
     float: left;
     height: 70px;
-}
-ul {
+  }
+  ul {
     float: left;
     display: flex;
     justify-content: center;
@@ -48,49 +50,48 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0; 
-}
-ul li{
+  }
+  ul li{
     list-style: none;
-    margin-left: 62px ;
+    margin-left: 50px ;
     margin-top: 27px;
     font-size: 14px;
-}
-ul li a{
+  }
+  ul li a{
     text-decoration: none;
      color: azure;
     font-family: Arial;
     font-weight: bold;
     transition: 0.4 ease-in-out;
-}
-ul li a:hover{
+  }
+  ul li a:hover{
     color: orange;
-}
-/* Search bar*/
-.search{
+  }
+ .search{
   width: 330px;
   float: left;
   margin-left: 270px;
-}
+ }
 .searchbtn{
   font-family: 'Times New Roman';
   width: 200px;
   height: 40px;
   background: transparent;
-  border: 2px solid aqua;
+  border: 2px solid rgb(108, 243, 140);
   margin-top: 13px;
   color: white;
   border-right: none;
   font-size: 16px;
   float: left;
   padding: 10px;
-  border-bottom-left-radius:0px;
+  border-bottom-left-radius: 5px;
   border-top-left-radius:5px ;
 }
 .submitbtn{
 width: 100px;
 height:65px;
-background: aqua;
-border: 2px solid aqua;
+background: rgb(24, 196, 173);
+border: 2px solid rgb(79, 230, 179);
 margin-top: 13px;
 color: rgb(0, 0, 0);
 font-size: 15px;
@@ -107,7 +108,7 @@ border-top-right-radius:1px ;
   width: 12000px;
   height: auto;
   margin: auto;
-  color: aqua;
+  color: aquamarine;
 }
 .content .par{
   padding-left: 10px;
@@ -133,16 +134,28 @@ border-top-right-radius:1px ;
   margin-bottom: 10px;
   margin-left: 20px;
 }
-body {
-  display: grid;
-  grid-auto-rows: 30px;
-  grid-gap: 2rem;
+nav{
+    flex: 1;
+    text-align: left;
+  }
+  h5{
+    color: rgb(147, 27, 91);
+    font-size: 40px; 
+    text-align: center;
+ }
+  p{
+    color: azure;
+    font-size: large;
+  }
+  .nav-wrapper{
+    display: flex;
+    /* Justyfing the content and then 
+    writing what we want to justify which
+    in this case will be the space in between*/
+
+    justify-content: space-between;
+    /* Adding space */
+    padding: 38px; /*Adds space */
+    flex-grow:1;
+    
 }
- .card{
-  align-items: center;
-  position: absolute;
- }
- .card:h5{
-width: 200px;
-height: auto;
- }
