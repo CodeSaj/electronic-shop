@@ -1,133 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>About Us</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-html {
-  box-sizing: border-box;
-}
+    <title>About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href= "style.css"> <!--style will get applied proparly-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+	
+	</style>
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: grey;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #555;
-}
-
-.link{
-  color: green;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-</style>
 </head>
 <body>
-<div class="about-section">
-  <a href="index.html" style="color:white">Home</a>
-  <a href="index.html" style="color:white">News</a>
-  <a href="ContactUs.html" style="color:white">Contact</a>
-  <a href="AboutUs.html" style="color:white">About</a>
-  <a href="index.html" style="color:white">Services</a>
-  <h1>About Us Page</h1>
-  <p>We are the team that founded Spark! We are committed to providing each customer with excellent customer service and providing all the latest and greatest electronic needs.</p>
-  <p>We strive to make sure every product we offer is the lowest price offered veruses our competitors, that if it isn't, we will price match any offer!</p>
-</div>
+    <div class="container">
+            <div class="navbar">
+                    <div class="icon">
+                        <h2 class="logo">SPARK </h2>
+                    </div>
+                       <div class="menu">
+                            <ul>
 
-<h2 style="text-align:center">Our Team</h2>
-<div class="row">
-  <div class="column">
-    <div class="card">
-      
-      <div class="container">
-        <h2>Saja</h2>
-        <p class="title">Co-Founder</p>        
-        <p>salallao0103@sdsu.edu</p>
-        <p><a href="ContactUs.html"><button class="button">Contact</button></a></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-      <div class="container">
-        <h2>Ryan</h2>
-        <p class="title">Co-Founder</p>
-        <p>rtran7934@sdsu.edu</p>
-        <p><a href="ContactUs.html"><button class="button">Contact</button></a></p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="column">
-    <div class="card">
-     
-      <div class="container">
-        <h2>Ezra</h2>
-        <p class="title">Co-Founder</p>
-        <p>egarcia9450@sdsu.edu</p>
-		<p><a href="ContactUs.html"><button class="button">Contact</button></a></p>
-      </div>
-    </div>
-  </div>
-</div>
+                                <li><a href="home.html">HOME</a></li>
+                                <li> <a href="news.html">NEWS</a></li>
+                                <li><a href="contactUs.html">CONTACT</a></li>
+                                <li><a href="AboutUs.html">ABOUT</a></li>
+                                <li><a href="services.html">SERVICES</a></li>
+                                <li><a href="shoppingCart.html">CART</a></li>
+                                
+                            </ul>
+                       </div>
+                       <div class="search">
+                        <form action="search.html">
+                            <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                            <a href="#"> <button class = "submitbtn" type="submit">Submit</button></a>
+                          </form>
+                       </div>
+            </div>
+			<br>
+			<h1 style="text-align:center; color:aqua;">About Us</h1>
+			<p style="color:black; background-color:white; text-align:center;">We are the team that founded Spark! We are committed to providing 
+			each customer with excellent customer service and providing all the latest and greatest electronic needs.
+			We strive to make sure every product we offer is the lowest price offered veruses our competitors, that 
+			if it isn't, we will price match any offer!</p>
+			<br>
+			<h2 style="text-align:center; color:aqua;">Our Team</h2>
+			<br><br><br><br>
+			<div class="row">
+				<div class="Acolumn">
+					<div class="card">
+						<div class="Acontainer" style="background: white; padding: 8px;">
+						<h2 style="text-align:center;">Saja</h2>
+						<p class="title" style="color:black; text-align:center;">Co-Founder</p>        
+						<p style="color:black; text-align:center;">salallao0103@sdsu.edu</p>
+						<p style="text-align:center;"><a href="ContactUs.html"><button class="button" style="padding: 8px;">Contact</button></a></p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="Acolumn">
+					<div class="card">      
+						<div class="Acontainer" style="background: white;">
+						<h2 style="text-align:center;">Ryan</h2>
+						<p class="title" style="color:black; text-align:center;">Co-Founder</p>
+						<p style="color:black; text-align:center;">rtran7934@sdsu.edu</p>
+						<p style="text-align:center;"><a href="ContactUs.html"><button class="button" style="padding: 8px;">Contact</button></a></p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="Acolumn">
+					<div class="card">
+						<div class="Acontainer" style="background: white;">
+						<h2 style="text-align:center;">Ezra</h2>
+						<p class="title" style="color:black; text-align:center;">Co-Founder</p>
+						<p style="color:black; text-align:center;">egarcia9450@sdsu.edu</p>
+						<p style="text-align:center;"><a href="ContactUs.html"><button class="button" style="padding: 8px;">Contact</button></a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            
+          
+	</div>
+    
 
 </body>
-</html>
+</html> 
