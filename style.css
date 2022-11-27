@@ -164,12 +164,13 @@ nav{
 
 .Acolumn {
   float: left;
-  width: 30%;
+  width: 32%;
   margin-bottom: 0px;
   padding: 0 8px;
 }
 .Acontainer {
   padding: 8px;
+  margin-left: 0px;
 }
 
 .Acontainer::after, .row::after {
@@ -180,5 +181,5 @@ nav{
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
+  margin: 10px;
 }
