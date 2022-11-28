@@ -14,7 +14,7 @@
   h4 {
     font-size: 19px;
     line-height: 1.375em;
-    color: #303030;
+    color: #000000;
     font-weight: 400; 
     text-align: center;
   
@@ -108,18 +108,24 @@
     
   }
   .thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-     display: flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    background: #808080;
+    margin: 5px;
+    align-items: center;
+    width: 400px;
+    height: 300;
   }
   
   .thumbnail img {
-    width: 20%;
-    height: 20%;
-    margin-bottom: 10px;
     display: flex;
-   
+    flex-flow: column nowrap;
+    align-items: center;
+    background: #808080;
+    margin: 5px;
+    width: 400px;
+    height: 300;
   }
  .search{
   width: 330px;
