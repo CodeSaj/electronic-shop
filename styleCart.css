@@ -1,10 +1,20 @@
+
+
+
 .shopping-cart{
-	padding-bottom: 50px;
+	 
 	font-family: 'Montserrat', sans-serif;
 }
 
 .shopping-cart.dark{
-	background-color: #f6f6f6;
+	background-color: #7a3535;
+	width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(246, 246, 246, 0.5)50%,rgba(246, 246, 246, 0.095)50%),url(Images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+     /*grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
 }
 
 .shopping-cart .content{
@@ -19,7 +29,7 @@
 }
 
 .shopping-cart .block-heading p{
-	text-align: center;
+
 	max-width: 420px;
 	margin: auto;
 	opacity:0.7;
