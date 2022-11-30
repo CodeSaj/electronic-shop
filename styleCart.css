@@ -18,7 +18,7 @@ img{
 }
 
 .cartContent{
-	background-color: white;
+	background-color: #f8eeec;
 }
 
  .column1 {			/*item photo */
@@ -51,6 +51,14 @@ img{
 	padding-top: 40px;
 	padding-bottom: 20px;
 	font-weight: 600;
+}
+
+.itemName{
+	color: aqua;
+}
+
+.itemName:hover{
+	color: orange;
 }
 
 .productName .productInfo{
