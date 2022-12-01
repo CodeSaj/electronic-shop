@@ -12,6 +12,8 @@
     background: linear-gradient(to top, rgba(246, 246, 246, 0.5)50%,rgba(246, 246, 246, 0.095)50%),url(Images/background.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
      /*grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
 
