@@ -1,4 +1,5 @@
 /*Shopping page css*/
+
 .shoppingPage{
 	padding-bottom: 50px;
 }
@@ -18,9 +19,9 @@ img{
 	color: aqua;
 }
 
-/* .cartContent{
+.cartContent{
 	background-color: #f8eeec;
-} */
+}
 
 .column1{			/*item photo */
 	float: left;
@@ -100,10 +101,10 @@ img{
 }
 
 .summary{
-	border-top: 2px solid #5ea4f3;
-    background-color: #f2f3f4;
-    height: 100%;
+	/* border-left: 2px solid #5ea4f3; */
+    /* background-color: #f2f3f4; */
     padding: 30px;
+	margin-bottom: 10px;
 }
 
 .summary h3{
@@ -159,6 +160,7 @@ img{
 
 .summary .checkoutButton{
     margin-top: 20px;
+	margin-left: 15px;
 	background-color: #008CBA;
     color: white;
     border: transparent;
@@ -172,34 +174,48 @@ img{
 }
 
 /*Checkout css*/
-.checkout{
-	margin-left: 25px;
-}
 
 .billingInfo h3{
 	margin-bottom: 10px;
 }
 
+.columnBill{
+	float: left;
+	width: 35%;
+	margin-left: 290px;
+	background-color: whitesmoke;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.columnSummary{
+	float: left;
+	width: 25%;
+	background-color: gainsboro;
+	padding: 20px;
+	padding-bottom: 529px;
+}
+
 .column{
 	float: left;
-	width: 20%;
+	width: 50%;
 	margin-bottom: 10px;
 }
 
 .columnA{
 	float: left;
-	width: 20%;
+	width: 50%;
 	margin-bottom: 10px;
 }
 
 .columnB{
 	float: left;
-	width: 10%;
+	width: 23%;
 	margin-bottom: 10px;
 }
 .columnC{
 	float: left;
-	width: 10%;
+	width: 25%;
 	margin-bottom: 10px;
 }
 
@@ -214,17 +230,33 @@ img{
 }
 
 .inputZip{
-	width: 77px;
+	width: 70px;
 	margin-bottom: 10px;
 }
 
 .input{
-	width: 437px;
+	width: 474px;
 	margin-bottom: 10px;
 }
 
 .shipAddress{
 	margin-bottom: 20px;
+}
+
+.delivery{
+	margin-bottom: 10px;
+}
+
+.priceDeliv1{
+	padding-left: 266px;
+}
+
+.priceDeliv2{
+	padding-left: 209px;
+}
+
+.priceDeliv3{
+	padding-left: 183px;
 }
 
 .payment{
@@ -236,7 +268,7 @@ img{
 }
 
 .cardNum{
-	width: 195px;
+	width: 198px;
 }
 
 .cardExp{
@@ -244,17 +276,19 @@ img{
 }
 
 .cardCvv{
-	width: 78px;
+	width: 55px;
 }
 
 .backHome .contShopping{
+	/* float: right; */
 	background-color: #008CBA;
     color: white;
     border: transparent;
     border-radius: 4px;
 	height: 40px;
-	width: 150px;
+	width: 170px;
 	margin-bottom: 10px;
+	margin-right: 10px;
 }
 
 .backHome .contShopping:hover{
@@ -262,14 +296,45 @@ img{
 }
 
 .order .cartOrder{
+	/* float: right; */
 	background-color: #008CBA;
     color: white;
     border: transparent;
     border-radius: 4px;
+	margin-bottom: 10px;
+	margin-right: 20px;
 	height: 40px;
-	width: 150px;
+	width: 170px;
 }
 
 .order .cartOrder:hover{
 	background-color: orange;
+}
+
+.summary2{
+	height: 100%;
+	margin-bottom: 10px;
+}
+
+.summary2 h3{
+	text-align: center;
+	font-size: 1.3em;
+	font-weight: 600;
+	padding-bottom: 20px;
+}
+
+.summary2 .summaryItem{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.summary2 .text{
+	font-size: 1em;
+	font-weight: 600;
+}
+
+.summary2 .price{
+	font-size: 1em;
+	float: right;
 }
