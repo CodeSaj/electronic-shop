@@ -63,21 +63,31 @@ input[type=submit]:hover {
 			<div class="Acontainer" style="background:white;">
 				<form action="ContactUsSent.html">
 				<label for="fname">First Name</label>
-				<input type="text1" id="fname" name="firstname" placeholder="Your first name..">
+				<input type="text1" id="fname" name="firstname" placeholder="Your first name.." Required="required">
 				<br>
 				<label for="lname">Last Name</label>
-				<input type="text1" id="lname" name="lastname" placeholder="Your last name..">
+				<input type="text1" id="lname" name="lastname" placeholder="Your last name.." Required="required">
 				<br>
-				<label for="country">Country</label>
-				<select id="country" name="country">
-				<option value="australia">Australia</option>
-				<option value="canada">Canada</option>
-				<option value="usa">USA</option>
-				</select>
+				<label for="email">Email</label>
+				<input type="text1" id="emailname" name="email" placeholder="Your email address here.." Required="required">
+				
+				<script>
+	// Get the email
+	function myFunction() {
+	var email = document.getElementById("emailname").value;
+	if (email.indexOf("@") > -1 && email.indexOf(".") > -1)
+	{
+	
+	}
+	else
+		alert("I am an alert box!");
+	}
+ 
+   </script>
 
 				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
-				<input type="submit" value="Submit">
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" Required="required"></textarea>
+				<input type="submit" value="Submit" onclick="myFunction()">
 				</form>
 			</div>
 	</div>
