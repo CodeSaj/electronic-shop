@@ -207,7 +207,7 @@ height:40px;}
 }
 
 .product-listing{
-    width: 100%;
+    width: 50%;
     min-height: 500px;
     height: auto;
     background: #292929;
@@ -215,9 +215,13 @@ height:40px;}
     display: flex;
     justify-content: center;
     color: #eae3d2;
-    opacity: 0;
+    opacity: 0.7 ;
     transform: translateY(50px);
     animation: fade-in 1s forwards 1;
+    margin-inline: revert-layer;
+    writing-mode: horizontal-tb;
+    direction: rtl;
+    margin-top: 10%; 
 }
 
 @keyframes fade-in{
