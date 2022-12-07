@@ -94,6 +94,9 @@ ul li a{
 ul li a:hover{
   color: rgb(255, 119, 0);
 }
+a.active, a:hover{
+    color: rgb(255, 119, 0);
+    transition: 0.5s;}
 @media screen and (max-width: 600px) {
   .container a, .container input[type=text] {
     float: none;
