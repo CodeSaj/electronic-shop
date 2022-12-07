@@ -1,19 +1,38 @@
+
 <!DOCTYPE html>
 <html>
+	<title>News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "stylesheet" href= "styleNews.css"> <!--style will get applied proparly-->    
-    <link rel= "stylesheet" href= "style.css"> <!--style will get applied proparly-->    
-    <link rel= "indexpage" href= "index.html">  
-    <a href="home.html">HOME</a>
-    <a href="news.html">NEWS</a>
-    <a href="contact.html">CONTACT</a>
-    <a href="about.html">ABOUT</a>
-    <a href="services.html">SERVICES</a>
-
+     <link rel= "stylesheet" href= "style.css"> <!--style will get applied proparly-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">  
 </html>
 <body>
-    <section class="subscription bg-white">
-        <div class="container">
+	<div class="container">
+            <div class="navbar">
+                    <div class="icon">
+                        <h2 class="logo">SPARK</h2>
+                    </div>
+                       <div class="menu">
+                            <ul>
+
+                                <li><a href="home.html">HOME</a></li>
+                                <li> <a href="news.html">NEWS</a></li>
+                                <li><a href="contactUs.html">CONTACT</a></li>
+                                <li><a href="AboutUs.html">ABOUT</a></li>
+                                <!-- <li><a href="services.html">SERVICES</a></li> -->
+                                <li><a href="shoppingCart.html">CART</a></li>
+                                
+                            </ul>
+                       </div>
+                       <div class="search">
+                        <form action="search.html">
+                            <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                            <a href="#"> <button class = "submitbtn" type="submit">Submit</button></a>
+                          </form>
+                       </div>
+            </div>
+			<br>
+			<div class="container">
           <div class="row">
             <div class="col-lg-12">
               <div class="subscription-wrapper">
@@ -32,5 +51,7 @@
             </div>
           </div>
         </div>
-      </section>
+        <p class="mt-5 mb-3 text-muted" style="color:black; text-align:center">&copy; 2017–2022</p>	  
+	</div>
+
 </body>
