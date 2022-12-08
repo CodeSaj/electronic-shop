@@ -29,6 +29,9 @@ h4 {
    /*grid-template-columns: 1fr;/* 1 fraction means one ende to end = 100%*/
 
 }
+a.active, a:hover{
+  color: rgb(255, 119, 0);
+  transition: 0.5s;}
 .navbar{
  
   height: 100px;
