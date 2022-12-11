@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel= "stylesheet" href= "style.css"> <!--style will get applied proparly-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 input[type=text1], select, textarea {
   width: 100%;
@@ -31,7 +30,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: rgb(22, 80, 80);
 }
- 
+}
 </style>
 </head>
 <body>
@@ -62,44 +61,48 @@ input[type=submit]:hover {
 			<h1 style="text-align:center; color:aqua;">Contact Us</h1>
 			<br><br>
 			<div class="Acontainer" style="background:white;">
-				<form action="ContactUsSent.html">
 				<label for="fname">First Name</label>
-				<input type="text1" id="fname" name="firstname" placeholder="Your first name..">
+				<input type="text1" id="fname" name="firstname" placeholder="Your first name.." Required="required">
 				<br>
 				<label for="lname">Last Name</label>
-				<input type="text1" id="lname" name="lastname" placeholder="Your last name..">
+				<input type="text1" id="lname" name="lastname" placeholder="Your last name.." Required="required">
 				<br>
-				<label for="country">Country</label>
-				<select id="country" name="country">
-				<option value="australia">Australia</option>
-				<option value="canada">Canada</option>
-				<option value="usa">USA</option>
-				</select>
-
+				<label for="email">Email</label>
+				<input type="text1" id="emailname" name="email" placeholder="Your email address here.." Required="required">
 				<label for="subject">Subject</label>
-				<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px"></textarea>
-				<input type="submit" value="Submit">
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" Required="required"></textarea>
+				<input type="submit" value="Submit" onclick="myFunction()">
+				
+				<script>
+				// Get the email
+				function myFunction() 
+				{
+					var empty = false;
+					var fname = document.getElementById("fname").value;
+					var lname = document.getElementById("lname").value;
+					var email = document.getElementById("emailname").value;
+					var subject = document.getElementById("subject").value;
+					if (fname == "" || lname == "" || subject == "" || email == "")
+					{
+						alert("First Name, Last Name, Email, and Subject must be filled out!");
+						empty = true;
+					}
+					else if (!(email.indexOf("@") > -1 && email.indexOf(".") > -1))
+					{
+						alert("A valid email must be entered!");
+						empty = true;
+					}
+					if(empty == false)
+						window.location.replace("ContactUsSent.html");
+				}
+	
+				</script>
+			
 				</form>
 			</div>
+			<br>
+			<p class="mt-5 mb-3 text-muted" style="color:black; text-align:center">&copy; 2017–2022</p>
 	</div>
 
-  <style>
-    footer {
-      text-align: center;
-      padding: 5px;
-      background-color: rgb(0, 16, 70);
-      color: rgba(0, 0, 0, 0);
-      font-style:normal; 
-    }
-    </style>
-  
-  
-    
-    <footer>
-      <p>SPARK<br>
-        For Any Complain Contact Our Co Founder Directly : <a href="https://www.linkedin.com/in/saja-a/"><i class="fa fa-linkedin"></i></a>	<br>
-      <a href="mailto:hege@example.com"> &copy; Copyright 2022 HTML.am</a></p>
-    </footer>
-     
 </body>
 </html>
