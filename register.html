@@ -23,7 +23,7 @@
                             <li><a href="contactUs.html">CONTACT</a></li>
                             <li><a href="AboutUs.html">ABOUT</a></li>
                             <li><a href="shoppingCart.html">CART</a></li>
-							<li><a class =active href="login.html">LOGIN</a></li>
+							<li><a href="login.html">LOGIN</a></li>
                         </ul>
                    </div>
                    <div class="search">
@@ -35,8 +35,7 @@
                   
                 
         </div>
-	
-		<h1 style="text-align:center; color:aqua;">Login</h1>
+		<h1 style="text-align:center; color:aqua;">Register</h1>
 			<br><br><br><br><br><br><br><br><br><br>
 			<div class="Acontainer" style="background:white; text-align:center">
 			<br><br><br><br>
@@ -44,13 +43,25 @@
 				<input type="text1" id="fname" name="firstname" placeholder="Enter Username Here" Required="required">
 				<br>
 				<label for="lname">Password</label>
-				<input type="text1" id="lname" name="lastname" placeholder="Enter Password Here" Required="required">
+				<input type="text1" id="pw" name="password" placeholder="Enter Password Here" Required="required">
+				<br>
+				<label for="lname" style="text-align:left">Re-Enter Password</label>
+				<input type="text1" id="repw" name="repassword" placeholder="Re-Enter Password Here" Required="required">
+				<br>
+				<label for="email">Email</label>
+				<input type="text1" id="emailname" name="email" placeholder="Your email address here.." Required="required">
 				<br><br>
-				<input type="submit" value="Submit" onclick="loginFunction()">
-				<li><a href="register.html">Not registered? Click Here</a></li>
+				<input type="submit" value="Register" onclick="registerFunction()">
 				<br><br><br>
-        
-      
+				<script>
+				// Get the email
+				function registerFunction() 
+				{
+					alert("Registration Complete!");
+					window.location.replace("login.html");
+				}
+	
+				</script>
 </div>  
 
 <style>
@@ -101,7 +112,7 @@
       
        
 </body>
- <br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <footer>
 	<p>SPARK<br>
 	  For Any Complaints, Contact Our Co Founder Directly : <a href="https://www.linkedin.com/in/saja-a/"><i class="fa fa-linkedin"></i></a>	<br>
