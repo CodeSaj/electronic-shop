@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+    <div class="container" style="background: linear-gradient(to top, rgba(0, 13, 53, 0.447)40%,rgba(246, 246, 246, 0.095)40%),{% static 'background.jpg' %};">
+        <div class="navbar">
+                <div class="icon">
+                    <h2 class="logo">SPARK</h2>
+                </div>
+                   <div class="menu">
+                        <ul>
+                            
+                            <li><a class =active href="{% url 'index' %}">HOME</a></li>
+                            <li><a href="{% url 'news' %}">NEWS</a></li>
+                            <li><a href="{% url 'contact' %}">CONTACT</a></li>
+                            <li><a href="{% url 'about' %}">ABOUT</a></li>
+                            <li><a href="{% url 'cart' %}">CART</a></li>
+							<li><a href="{% url 'login' %}">LOGIN</a></li>
+                        </ul>
+                   </div>
+                   <div class="search">
+                    <form action="{% url 'search' %}">
+                        <input class = "searchbtn" type="text" placeholder="Search.." name="search">
+                        <a href="#"> <button class = "submitbtn" type="submit">Submit</button></a>
+                      </form>
+                   </div>
+                  
+                
+        </div>
+        
+      
+</div>  
+
+<div class="row">
+    <div class="column">
+        <a href="{% url 'productDetails' %}"><img src="{% static 'Laptop.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'Ipad.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'Phone.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic1.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic17.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic12.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic3.jpg' %}"></a> 
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic4.jpg' %}"></a> 
+    </div>
+    <div class="column">
+       
+        <a href="{% url 'productDetails' %}"><img src="{% static 'Phone.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic5.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic6.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic9.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic12.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic13.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic16.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic19.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic20.jpg' %}"></a>
+        
+    </div>
+    <div class="column">
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic13.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic14.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic15.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic16.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic17.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic19.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic20.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic21.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic6.jpg' %}"></a>
+         
+    </div>
+    <div class="column">
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic20.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic21.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic13.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic16.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic17.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic22.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic12.jpg' %}"></a>
+        <a href="{% url 'productDetails' %}"><img src="{% static 'pic5.jpg' %}"></a>
+   
+    </div>
+    
+  </div>
+   
+        
+ 
+    <style>
+        footer {
+          text-align: center;
+          padding: 5px;
+          background-color: rgba(255, 255, 255, 0.718);
+          color: rgba(255, 0, 0, 0.178);
+          font-style:normal; 
+        }
+        </style>
+      
+      
+        
+        <footer>
+          <p style="color: black;">SPARK<br>
+            For Any Complain Contact Our Co Founder Directly : <a href="https://www.linkedin.com/in/Pt-a/"><i class="fa fa-linkedin"></i></a>	<br>
+          <a href="mailto:hege@example.com"> &copy; Copyright 2022 HTML.am</a></p>
+        </footer>
+         
+
+</body>
+</html> 
