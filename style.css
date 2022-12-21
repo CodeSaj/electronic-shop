@@ -210,26 +210,34 @@ p{
 
 
 .Acolumn {
-float: left;
+float: center;
 width: 32%;
-height: 60%;
+height: 80%;
 margin-bottom: 0px;
-padding: 0 8px;
+padding: 0 20px;
+position: center;
+
 }
 .Acontainer {
+align-items: center;  
+width: 32%;
+height: 60%;
 padding: 8px;
-margin-left: 0px;
+position: center;
+margin-right: 100px;
 }
 
 .Acontainer::after, .row::after {
 content: "";
 clear: both;
 display: table;
+position: center;
+
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  margin: 8px;
 }
 
 .gallery {
