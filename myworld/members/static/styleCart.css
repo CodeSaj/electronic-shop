@@ -18,9 +18,7 @@ img{
 	text-align: center;
 	color: aqua;
 }
-a.active, a:hover{
-	color: rgb(255, 119, 0);
-	transition: 0.5s;}
+
 .cartContent{
 	background-color: #f8eeec;
 }

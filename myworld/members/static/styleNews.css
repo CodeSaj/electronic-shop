@@ -94,6 +94,9 @@ ul li a{
 ul li a:hover{
   color: rgb(255, 119, 0);
 }
+a.active, a:hover{
+    color: rgb(255, 119, 0);
+    transition: 0.5s;}
 @media screen and (max-width: 600px) {
   .container a, .container input[type=text] {
     float: none;
@@ -112,18 +115,19 @@ ul li a:hover{
 
 .search{
 width: 330px;
-float: right;
-margin-left: 0px;
-}
+float: left;
+margin-left: 600px;
+ }
 .searchbtn{
+  border: #ccc;
 align-items: left;
 font-family: 'Times New Roman';
 width: 200px;
 height: 60px;
 background: transparent;
 border: 2px solid rgb(255, 255, 255);
-margin-top: 13px;
-color: white;
+margin-top: 2px;
+color: black;
 border-right: none;
 font-size: 16px;
 float: left;
@@ -138,21 +142,20 @@ width: 100px;
 height:60px;
 background: rgb(255, 255, 255);
 border: 2px solid rgb(255, 255, 255);
-margin-top: 13px;
+margin-top: 8px;
 color: rgb(17, 3, 74);
 font-size: 15px;
 border-bottom-right-radius:1px;
 border-top-right-radius:1px ;
 }
-
 .submitbtn:hover {
-background-color: rgb(255, 102, 7);
+background-color: rgb(255, 0, 0);
 }
 .searchbtn:focus{
 outline: none;
 }
 .content{
-width: 12000px;
+width: 120px;
 height: auto;
 margin: auto;
 color: aquamarine;
@@ -160,19 +163,26 @@ color: aquamarine;
 
 
               /* Style the form element with a border around it */
-              .form1 {
-                border: 4px solid #f1f1f1;
+            
+              .lable{
+                padding: 50px;
               }
-
               /* Add some padding and a grey background color to containers */
               .cont {
-                padding: 20px;
-                background-color: #f1f1f1;
+                padding: 40px;
+                background-color: #f1f1f14a;
               }
-
+            
+              .email::after, .row::after {
+                content: "";
+                clear: both;
+                display: table;
+                position: center;
+                
+                }
               /* Style the input elements and the submit button */
               input[type=text], input[type=submit] {
-                width: 100%;
+                width: 30%;
                 padding: 12px;
                 margin: 8px 0;
                 display: inline-block;
@@ -187,7 +197,8 @@ color: aquamarine;
 
               /* Style the submit button */
               input[type=submit] {
-                background-color: #003a23;
+                font-family: bold ;
+                background-color: #5fd5fc;
                 color: rgb(0, 0, 0);
                 border: none;
               }

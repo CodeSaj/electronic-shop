@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}My Shop{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+  </head>
+  <body>
+    <div id="header">
+      <a href="#" class="logo">Spark</a>
+      <a href="#">HOME</a>
+      <a href="#">NEWS</a>
+      <a href="#">CONTACT</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CART</a>
+      <a href="#">LOGIN</a>
+      <div class="search">
+        <form action="search.html">
+            <input class = "searchbtn" type="text" placeholder="Search..." name="search">
+            <a href="#"><button class = "submitbtn" type="submit">Submit</button></a>
+        </form>
+      </div>
+    </div>
+    <div id="subheader">
+      <div class="cart">
+      {% with total_items=cart|length %}
+      {% if total_items > 0 %}
+      Your Cart:
+      <a href="{% url "cart:cart_detail" %}">
+        {{ total_items }} item{{ total_items|pluralize }}
+      </a>
+      {% else %}
+      Your Cart is Empty
+      {% endif %}
+      {% endwith %}
+      </div>
+    </div>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

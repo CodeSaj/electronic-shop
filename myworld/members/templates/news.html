@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'styleNews.css' %}">
 	<link rel="stylesheet" href="{% static 'style.css' %}">
+	
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 </html>
@@ -33,23 +34,47 @@
                           </form>
                        </div>
             </div>
-            <form1 action="action_page.php">
+            <form1 action="https://formsubmit.co/0fa2f1651ad742b9520f6e9490c22e19" method="POST">
               <div class="cont">
                 <h2>Subscribe to our Newsletter</h2>
                 <p><b>If you want to get all our news and deals subscribe to our Newsletter!</b></p>
               </div>
             
-              <div class="cont" style="background-color:white">
-                <input type="text" placeholder="Name" name="name" required>
-                <input type="text" placeholder="Email address" name="mail" required>
-                <label>
+              <div class="cont" style="background-color:rgba(77, 78, 125, 0.299)">
+                <label for="name"> Name</label>
+                <input type="text1" id="name" name="name" placeholder="Enter Your name.." Required="required">
+                <br>
+                <label for="email">Email</label>
+                <input type="text1" id="emailname" name="email" placeholder="Enter your email address.." Required="required">
                   <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
                 </label>
               </div>
             
               <div class="cont">
-                <input type="submit" value="Subscribe">
+                <input type="submit" value="Subscribe" onclick="myFunction()">
               </div>
+              <script>
+                // Get the email
+                function myFunction() 
+                {
+                  var empty = false;
+                   var name = document.getElementById("name").value;
+                  var email = document.getElementById("emailname").value;
+                  if  (name == ""|| email == "")
+                  {
+                    alert("Your Name and Email must be filled out!");
+                    empty = true;
+                  }
+                  else if (!(email.indexOf("@") > -1 && email.indexOf(".") > -1))
+                  {
+                    alert("A valid email must be entered!");
+                    empty = true;
+                  }
+                  if(empty == false)
+                    window.location.replace("{% url 'contactSent' %}");
+                }
+            
+                </script>
             </form1>
            
           </div>
