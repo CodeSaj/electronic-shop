@@ -2,6 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import Members
+from django.contrib.auth import authenticate, login
 
 def index(request):
   mymembers = Members.objects.all().values()
@@ -15,12 +16,26 @@ def add(request):
   template = loader.get_template('add.html')
   return HttpResponse(template.render({}, request))
   
-def addrecord(request):
-  x = request.POST['first']
-  y = request.POST['last']
-  member = Members(username=x, password=y)
+def adduser(request):
+  x = request.POST['username']
+  y = request.POST['pw']
+  z = request.POST['email']
+  member = Members(username=x, password=y, email=z)
   member.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('login'))
+  
+def loginU(request):
+    user = request.POST['username']
+    passw = request.POST['pw']
+    name = ""
+    mydata = Members.objects.filter(username=user, password=passw).values()
+    for x in mydata:
+        name = x
+        
+    if name is not "":
+        return HttpResponseRedirect(reverse('index'))
+    else:
+        return HttpResponseRedirect(reverse('login'))
   
 def delete(request, id):
   member = Members.objects.get(id=id)
@@ -78,4 +93,8 @@ def checkout(request):
   
 def productDetails(request):
   template = loader.get_template('productDetails.html')
+  return HttpResponse(template.render({}, request))
+  
+def register(request):
+  template = loader.get_template('register.html')
   return HttpResponse(template.render({}, request))

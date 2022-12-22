@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 <body>
 
@@ -37,47 +36,120 @@
         </div>
 		<h1 style="text-align:center; color:aqua;">Register</h1>
 			<br><br><br><br><br><br><br><br><br><br>
-			<div class="Acontainer" style="background:white; text-align:center">
-			<br><br><br><br>
-				<label for="fname">Username</label>
-				<input type="text1" id="fname" name="firstname" placeholder="Enter Username Here" Required="required">
+			<div class="Acontainer" style="background:rgb(1, 5, 58); text-align:center">
+			<br>
+				<form action="addrecord/" method="post">
+					{% csrf_token %}
+				<label for="username" style="color:white">Username</label><br>
+				<input name="username" style="text-align:center" id="username" name="username" placeholder="Enter Username Here" onkeyup="checkUsername();" Required="required">
+				
+				<input class="checkbox" type = "checkbox" id="cbUser" onclick="return false;"><br>
+				<label for="pw1" style="color:white">Password</label><br>
+				<input type="password" style="text-align:center" id="pw" name="pw" placeholder="Enter Password Here" onkeyup="checkPW();" Required="required">
+				<input type="checkbox" id="cbPW" name="cbPW" value="cbPW" onclick="return false;"><br>
+				<label for="repw" style="color:white">Re-Enter Password</label><br>
+				<input type="password" style="text-align:center" id="repw" name="repassword" placeholder="Re-Enter Password Here" onkeyup="checkrePW();" Required="required">
+				<input type="checkbox" id="cbrePW" name="cbrePW" value="cbrePW" onclick="return false;"><br>
+				<label for="email" style="color:white">Email</label><br>
+				<input name="email" style="text-align:center" id="email" name="email" placeholder="Your Email Address Here" onkeyup="checkEmail();" Required="required">
+				<input type="checkbox" id="cbEmail" name="cbEmail" value="cbEmail" onclick="return false;">
 				<br>
-				<label for="lname">Password</label>
-				<input type="text1" id="pw" name="password" placeholder="Enter Password Here" Required="required">
+				<label for="message" style="color:white">Make sure all checkboxes are checked by filling out the selections correclty.</label>
 				<br>
-				<label for="lname" style="text-align:left">Re-Enter Password</label>
-				<input type="text1" id="repw" name="repassword" placeholder="Re-Enter Password Here" Required="required">
+				<label for="message1" style="color:white">Passwords MUST Match and Email MUST be valid.</label>
 				<br>
-				<label for="email">Email</label>
-				<input type="text1" id="emailname" name="email" placeholder="Your email address here.." Required="required">
-				<br><br>
-				<input type="submit" value="Register" onclick="registerFunction()">
-				<br><br><br>
+				<input id="sButton" type="submit" value="Register" disabled="disabled" onclick="mess();">
+				
+				</form>
+				
 				<script>
 				// Get the email
+				var user = false;
+				var p = false;
+				var rp = false;
+				var e = false;
+				
+				function mess()
+				{
+					alert("Registration Complete!");
+				}
+				
+				function checkUsername()
+				{
+					var username = document.getElementById("username").value;
+					if (username != "")
+					{
+						document.getElementById("cbUser").checked = true;
+						user = true;
+					}
+					else
+					{
+						document.getElementById("cbUser").checked = false;
+						user = false;
+					}
+					registerFunction();
+				}
+				function checkPW()
+				{
+					var pw1 = document.getElementById("pw").value;
+					if (pw1 != "")
+					{
+						document.getElementById("cbPW").checked = true;
+						p = true;
+					}
+					else
+					{
+						document.getElementById("cbPW").checked = false;
+						p = false;
+					}
+					registerFunction();
+				}
+				function checkrePW()
+				{
+					var pw1 = document.getElementById("pw").value;
+					var repw = document.getElementById("repw").value;
+					if (pw1 == repw &&  pw1 != "" && repw != "")
+					{
+						document.getElementById("cbrePW").checked = true;
+						rp = true;
+					}
+					else
+					{
+						document.getElementById("cbrePW").checked = false;
+						rp = false;
+					}
+					registerFunction();
+				}
+				
+				function checkEmail()
+				{
+					var email = document.getElementById("email").value;
+					if (email.indexOf("@") > -1 && (email.indexOf(".com") > -1 || email.indexOf(".net") > -1 || email.indexOf(".edu") > -1))
+					{
+						document.getElementById("cbEmail").checked = true;
+						e = true;
+					}
+					else
+					{
+						document.getElementById("cbEmail").checked = false;
+						e = false;
+					}
+					registerFunction();
+				}
+				
 				function registerFunction() 
 				{
-					var empty = false;
-					var fname = document.getElementById("fname").value;
-					var lname = document.getElementById("lname").value;
-					var email = document.getElementById("emailname").value;
-					var subject = document.getElementById("subject").value;
-					if (fname == "" || lname == "" || subject == "" || email == "")
-					{
-						alert("First Name, Last Name, Email, and Subject must be filled out!");
-						empty = true;
-					}
-					else if (!(email.indexOf("@") > -1 && email.indexOf(".") > -1))
-					{
-						alert("A valid email must be entered!");
-						empty = true;
-					}
-					if(empty == false)
-						window.location.replace("{% url 'login' %}");
-					alert("Registration Complete!");					
+					if(user == true && p == true && rp == true && e == true)
+						document.getElementById('sButton').disabled = false;
+					else
+						document.getElementById('sButton').disabled = true;
 				}
-	
+				
 				</script>
+				
+				
+				
+
 </div>  
 
 <style>

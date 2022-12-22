@@ -31,24 +31,59 @@
                         <input class = "searchbtn" type="text" placeholder="Search.." name="search">
                         <a href="#"> <button class = "submitbtn" type="submit">Submit</button></a>
                       </form>
-                   </div>
-                  
-                
+                   </div>                
         </div>
 	
 		<h1 style="text-align:center; color:aqua;">Login</h1>
 			<br><br><br><br><br><br><br><br><br><br>
-			<div class="Acontainer" style="background:white; text-align:center">
+			<div class="Acontainer" style="background:rgb(1, 5, 58); text-align:center">
 			<br><br><br><br>
-				<label for="fname">Username</label>
-				<input type="text1" id="fname" name="firstname" placeholder="Enter Username Here" Required="required">
+				<form action="loginUser/" method="POST">
+				{% csrf_token %}
+				<label for="username" style="color:white">Username</label>
+				<input type="text1" id="username" name="username" placeholder="Enter Username Here" onkeyup="checkUsername();" Required="required">
 				<br>
-				<label for="lname">Password</label>
-				<input type="text1" id="lname" name="lastname" placeholder="Enter Password Here" Required="required">
+				<label for="pw" style="color:white">Password</label>
+				<input type="password" id="pw" name="pw" placeholder="Enter Password Here" onkeyup="checkPW();" Required="required">
 				<br><br>
-				<input type="submit" value="Submit" onclick="loginFunction()">
-				<li><a href="register.html">Not registered? Click Here</a></li>
-				<br><br><br>
+				<input type="submit" value="Submit" id="sButton" onclick="loginFunction()" disabled="disabled"><br><br>
+				<a href="{% url 'register' %}" style="color:white">Not registered? Click Here</a>
+				<br><br><br>				
+				</form>
+				
+				<script>
+				// Get the email
+				var user = false;
+				var p = false;
+				
+				function checkUsername()
+				{
+					var username = document.getElementById("username").value;
+					if (username != "")
+						user = true;
+					else
+						user = false;
+					loginFunction();
+				}
+				function checkPW()
+				{
+					var pw1 = document.getElementById("pw").value;
+					if (pw1 != "")
+						p = true;
+					else
+						p = false;
+					loginFunction();
+				}
+		
+				function loginFunction() 
+				{
+					if(user == true && p == true)
+						document.getElementById('sButton').disabled = false;
+					else
+						document.getElementById('sButton').disabled = true;
+				}
+				
+				</script>
         
       
 </div>  
